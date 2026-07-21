@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "name": "deterministic_gain",
+      "size": 10,
+      "start": [
+        9,
+        5
+      ],
+      "terminals": [
+        [
+          0,
+          5
+        ]
+      ],
+      "walls": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "outcomes": [
+        {
+          "position": [
+            6,
+            2
+          ],
+          "value": 1.0
+        },
+        {
+          "position": [
+            7,
+            2
+          ],
+          "value": 0.5
+        },
+        {
+          "position": [
+            8,
+            4
+          ],
+          "value": 0.2
+        },
+        {
+          "position": [
+            8,
+            7
+          ],
+          "value": 0.3
+        }
+      ],
+      "inventory_positions": [
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "transition_mode": "deterministic",
+      "objective_mode": "gain",
+      "slip_prob": 0.0,
+      "step_cost": -0.01,
+      "max_steps": 120,
+      "collect_once": true,
+      "inventory_state": true,
+      "transition_context": "deterministic",
+      "outcome_context": "gain",
+      "visible_theme": "forest_foraging",
+      "metadata": {
+        "template": true,
+        "outcomes_hidden_from_agent": true,
+        "wall_probe_cue": {
+          "transition_gate_left": false,
+          "loss_gate_right": false
+        }
+      }
+    },
+    {
+      "name": "deterministic_loss",
+      "size": 10,
+      "start": [
+        9,
+        5
+      ],
+      "terminals": [
+        [
+          0,
+          5
+        ]
+      ],
+      "walls": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          6
+        ]
+      ],
+      "outcomes": [
+        {
+          "position": [
+            6,
+            2
+          ],
+          "value": -1.0
+        },
+        {
+          "position": [
+            7,
+            2
+          ],
+          "value": -0.5
+        },
+        {
+          "position": [
+            8,
+            4
+          ],
+          "value": -0.2
+        },
+        {
+          "position": [
+            8,
+            7
+          ],
+          "value": -0.3
+        }
+      ],
+      "inventory_positions": [
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "transition_mode": "deterministic",
+      "objective_mode": "loss_avoidance",
+      "slip_prob": 0.0,
+      "step_cost": -0.01,
+      "max_steps": 120,
+      "collect_once": true,
+      "inventory_state": true,
+      "transition_context": "deterministic",
+      "outcome_context": "loss_avoidance",
+      "visible_theme": "safe_navigation",
+      "metadata": {
+        "template": true,
+        "outcomes_hidden_from_agent": true,
+        "wall_probe_cue": {
+          "transition_gate_left": false,
+          "loss_gate_right": true
+        }
+      }
+    },
+    {
+      "name": "stochastic_gain",
+      "size": 10,
+      "start": [
+        9,
+        5
+      ],
+      "terminals": [
+        [
+          0,
+          5
+        ]
+      ],
+      "walls": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "outcomes": [
+        {
+          "position": [
+            6,
+            2
+          ],
+          "value": 1.0
+        },
+        {
+          "position": [
+            7,
+            2
+          ],
+          "value": 0.5
+        },
+        {
+          "position": [
+            8,
+            4
+          ],
+          "value": 0.2
+        },
+        {
+          "position": [
+            8,
+            7
+          ],
+          "value": 0.3
+        }
+      ],
+      "inventory_positions": [
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "transition_mode": "stochastic",
+      "objective_mode": "gain",
+      "slip_prob": 0.2,
+      "step_cost": -0.01,
+      "max_steps": 120,
+      "collect_once": true,
+      "inventory_state": true,
+      "transition_context": "stochastic",
+      "outcome_context": "gain",
+      "visible_theme": "windy_foraging",
+      "metadata": {
+        "template": true,
+        "outcomes_hidden_from_agent": true,
+        "wall_probe_cue": {
+          "transition_gate_left": true,
+          "loss_gate_right": false
+        }
+      }
+    },
+    {
+      "name": "stochastic_loss",
+      "size": 10,
+      "start": [
+        9,
+        5
+      ],
+      "terminals": [
+        [
+          0,
+          5
+        ]
+      ],
+      "walls": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          6
+        ]
+      ],
+      "outcomes": [
+        {
+          "position": [
+            1,
+            7
+          ],
+          "value": -2.5
+        },
+        {
+          "position": [
+            6,
+            2
+          ],
+          "value": -1.0
+        },
+        {
+          "position": [
+            7,
+            2
+          ],
+          "value": -0.5
+        },
+        {
+          "position": [
+            8,
+            4
+          ],
+          "value": -0.2
+        },
+        {
+          "position": [
+            8,
+            7
+          ],
+          "value": -0.3
+        }
+      ],
+      "inventory_positions": [
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "transition_mode": "stochastic",
+      "objective_mode": "loss_avoidance",
+      "slip_prob": 0.2,
+      "step_cost": -0.01,
+      "max_steps": 120,
+      "collect_once": true,
+      "inventory_state": true,
+      "transition_context": "stochastic",
+      "outcome_context": "loss_avoidance",
+      "visible_theme": "ice_hazards",
+      "metadata": {
+        "template": true,
+        "outcomes_hidden_from_agent": true,
+        "wall_probe_cue": {
+          "transition_gate_left": true,
+          "loss_gate_right": true
+        }
+      }
+    }
+  ],
+  "difficulty_audit": null
+}
